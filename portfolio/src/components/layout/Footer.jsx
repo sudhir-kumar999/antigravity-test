@@ -16,15 +16,15 @@ export default function Footer() {
         </div>
 
         <div className="flex space-x-6 mb-6 md:mb-0">
-          <a href="#" className="text-slate-400 hover:text-primary-500 transition-colors">
+          <a href="https://github.com/sudhir-kumar999" className="text-slate-400 hover:text-primary-500 transition-colors">
             <FiGithub size={24} />
           </a>
-          <a href="#" className="text-slate-400 hover:text-blue-500 transition-colors">
+          <a href="https://www.linkedin.com/in/sudhir-kumar-sk966/" className="text-slate-400 hover:text-blue-500 transition-colors">
             <FiLinkedin size={24} />
           </a>
-          <a href="#" className="text-slate-400 hover:text-cyan-500 transition-colors">
+          {/* <a href="#" className="text-slate-400 hover:text-cyan-500 transition-colors">
             <FiTwitter size={24} />
-          </a>
+          </a> */}
         </div>
       </div>
       
