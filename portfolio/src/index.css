@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter antialiased bg-slate-50 text-slate-900 transition-colors duration-300;
+  }
+  
+  .dark body {
+    @apply bg-dark-bg text-dark-text;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .dark .glass {
+    @apply bg-slate-900/70 border-slate-700/50 shadow-2xl;
+  }
+
+  .glass-card {
+    @apply bg-white/40 backdrop-blur-lg border border-white/50 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-2xl;
+  }
+
+  .dark .glass-card {
+    @apply bg-slate-800/40 border-slate-700/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 rounded-full border-2 border-primary-500 text-primary-600 font-medium hover:bg-primary-50 hover:text-primary-700 hover:scale-105 transition-all duration-300 active:scale-95;
+  }
+
+  .dark .btn-outline {
+    @apply border-primary-400 text-primary-400 hover:bg-primary-900/30;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-20 md:py-32 relative z-10;
+  }
+  
+  .heading-primary {
+    @apply font-poppins text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-blue-600 mb-6;
+  }
+  
+  .dark .heading-primary {
+    @apply from-primary-400 to-blue-400;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-slate-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-600;
+}
